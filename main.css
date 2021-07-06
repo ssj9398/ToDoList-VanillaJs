@@ -29,7 +29,26 @@
     font-weight: lighter;
 }
 
+.boxs {
+    display      : flex;
+    border-radius: 10px;
 
+}
+
+.box {
+
+    width           : 50%;
+    text-align      : center;
+    color           : white;
+    background-color: blueviolet;
+    border          : 10px solid white;
+
+}
+
+.box>ul>li {
+    text-align: left;
+
+}
 
 #footer {
     display        : flex;
