@@ -17,3 +17,22 @@ function init() {
 }
 
 init();
+
+const addButton = document.querySelector(".add-button");
+const text = document.querySelector(".text");
+const boxDo = document.querySelector(".box-do");
+const ultest = document.querySelector(".ultest");
+const ulTag = document.createElement("ul");
+const length = document.getElementsByClassName(".box-do>ul");
+const eleCount = length.childElementCount;
+
+addButton.addEventListener("click", () => {
+    console.log(text.value);
+    var html = '<li>' + text.value + '</li>';
+    var ul = document.createElement("ul");
+    ul.innerHTML = html;
+    console.log(eleCount);
+
+    boxDo.append(ul);
+
+})
