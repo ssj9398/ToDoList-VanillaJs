@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+* {
+    color: #fff;
+}
+
 #wrap {
     margin          : 0 auto;
-    background-color: blueviolet;
+    background-image: url(background.jpg);
 }
 
 #header {
@@ -11,7 +15,6 @@
     justify-content: center;
     align-items    : center;
     width          : 100%;
-    color          : #fff;
     text-align     : center;
 }
 
@@ -29,27 +32,8 @@
     font-weight: lighter;
 }
 
-.boxs {
-    display      : flex;
-    border-radius: 10px;
-
-}
-
-.box-do,
-.box-done {
-
-    width           : 50%;
-    text-align      : center;
-    color           : white;
-    background-color: blueviolet;
-    border          : 10px solid white;
-
-}
-
-.box-do>ul>li,
-.box-done>ul>li {
-    text-align: left;
-
+main {
+    height: 700px;
 }
 
 #footer {
@@ -59,6 +43,13 @@
     width          : 100%;
     height         : 50px;
     margin-top     : 10px;
-    color          : #fff;
     text-align     : center;
+}
+
+button {
+    background-color: black;
+}
+
+.text {
+    color: black;
 }

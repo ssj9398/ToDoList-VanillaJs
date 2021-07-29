@@ -19,20 +19,28 @@ function init() {
 init();
 
 const addButton = document.querySelector(".add-button");
+const delButton = document.querySelector(".del-button");
 const text = document.querySelector(".text");
 const boxDo = document.querySelector(".box-do");
-const ultest = document.querySelector(".ultest");
-const ulTag = document.createElement("ul");
 const length = document.getElementsByClassName(".box-do>ul");
-const eleCount = length.childElementCount;
 
 addButton.addEventListener("click", () => {
-    console.log(text.value);
-    var html = '<li>' + text.value + '</li>';
-    var ul = document.createElement("ul");
-    ul.innerHTML = html;
-    console.log(eleCount);
-
-    boxDo.append(ul);
-
+    var html = '<li>' + text.value + `<button class="del-button far fa-minus-square fa-1x"></button>` + '</li>';
+    if (boxDo.childElementCount > 1) {
+        var ul = document.createElement("ul");
+        ul.innerHTML = html;
+        boxDo.append(ul);
+        console.log("111" + boxDo.childElementCount);
+    }
+    else {
+        var ul = document.querySelector("ul");
+        ul.innerHTML = html;
+        boxDo.append(length);
+        console.log("111" + boxDo.childElementCount);
+    }
+});
+const ulTag = document.querySelector("ul").childNodes;
+//ulTag.childNodes
+ulTag.addEventListener("click", (e) => {
+    alert("a");
 })
